@@ -1,0 +1,14 @@
+player (id SERIAL, name TEXT UNIQUE NOT NULL, email TEXT, password TEXT, victory_nb INT)
+
+game (id SERIAL, score TEXT, victory_type TEXT, winner TEXT)
+
+match (#player_A(id) INT, #player_B(id) INT, #game(id) INT)
+
+----------------------------------------------------------------------
+
+Infos complémentaires sur les relations :
+On va observer les cardinalités max pour chaque relation entre 2 entités pour déterminer comment implémenter cette relation en SQL
+
+- max 1,n : on ajoute une clé étrangère sur la table qui détient 1
+- max 1,1 : on met une clé étrangère sur une des 2 tables, là où ça parait logique
+- max n,n : on est obligé d'ajouter une nouvelle table pour faire la relation entre les 2 entités

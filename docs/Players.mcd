@@ -1,0 +1,3 @@
+Player: id, name, email, password, victory_nb
+play, 0N Player, 0N Game
+Game: id, date, score, victory-type, winner
